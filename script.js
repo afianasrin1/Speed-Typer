@@ -50,6 +50,7 @@ const typeController = (e) => {
     display.innerHTML += `<span class="red">${
       newLetter === " " ? "▪" : newLetter
     }</span>`;
+    errorCount++; //misteks problem solve
   }
 
   // check if given question text is equal to user typed text
@@ -114,10 +115,10 @@ const start = () => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`; //backtick silo na
 
     // finished timer
-    if (count === 0) {
+    if (count == 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
+      countdownOverlay.style.display = "none"; //flex silo none korte hobe
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
