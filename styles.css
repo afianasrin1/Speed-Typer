@@ -182,12 +182,23 @@ button {
   top: 0;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 767px) {
   .box-container {
     padding: 0 20px;
     width: 100%;
   }
   .card {
     flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .box-container {
+    padding: 0 20px;
+    width: 100%;
+  }
+  .card {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

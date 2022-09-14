@@ -72,7 +72,9 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
-  const timeTaken = (finishTime - startTime) / 1000;
+  const timeTakenDecimal = (finishTime - startTime) / 1000;
+  //timeTaken integer e fixed
+  const timeTaken = parseInt(timeTakenDecimal);
 
   // show result modal
   resultModal.innerHTML = "";
@@ -82,10 +84,10 @@ const gameOver = () => {
   display.innerHTML = "";
   // make it inactive
   display.classList.add("inactive");
-  // show result and timeTaken ke parseInt korlam
+  // show result
   resultModal.innerHTML += `
     <h1>Finished!</h1>
-    <p>You took: <span class="bold">${parseInt(timeTaken)}</span> seconds</p>
+    <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
@@ -137,10 +139,11 @@ displayHistory();
 // Show typing time spent
 setInterval(() => {
   const currentTime = new Date().getTime();
-  const timeSpent = (currentTime - startTime) / 1000;
+  const timeSpentDecimal = (currentTime - startTime) / 1000;
+  //timeSpent ke integer e fixed
+  const timeSpent = parseInt(timeSpentDecimal);
 
   document.getElementById("show-time").innerHTML = `${
-    startTime ? parseInt(timeSpent) : 0
+    startTime ? timeSpent : 0
   } seconds`;
 }, 1000);
-//  timeSpent ke parseInt korlam
