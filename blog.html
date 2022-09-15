@@ -1,38 +1,110 @@
+<!-- start blog -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Speed Typer</title>
+    <!------------------------- tailwind css here  -------------------->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <section>
-      <div>
-        Q1.Differences between localStorage & sessionStorage ? Ans. Session
-        storage is destroyed once the user closes the browser whereas, Local
-        storage stores data with no expiration date.
+
+  <body class="bg-white">
+    <!---------header start here-------->
+    <header class="pb-3">
+      <div class="navbar md:w-10/12 w-9/12 flex-wrap mx-auto border-b-2 py-7">
+        <div class="flex-none gap-6">
+          <ul class="flex gap-6">
+            <li>
+              <a href="index.html" class="font-bold text-green-800 underline"
+                >home</a
+              >
+            </li>
+            <li>
+              <a href="#" class="font-extrabold text-pink-700 underline"
+                >Blog</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-      <div>
-        Q2. Differences between Global Scope & Block Scope Ans.A global variable
-        has a global scope which means it can be defined anywhere in your
-        JavaScript code. Local Variables A local variable will be visible only
-        within a function where it is defined.
-      </div>
-      <div>
-        Q3.JavaScript Event Loop Working Principle in brief?Ans. JavaScript
-        event loop, a constantly running process that coordinates the tasks
-        between the call stack and callback queue to achieve concurrency. The
-        event loop is a constantly running process that monitors both the
-        callback queue and the call stack.
-      </div>
-      <div>
-        Q4. The ways you can get `undefined` in JavaScript.Ans.(a)A variable
-        that has not been assigned a value is of type undefined .(b) A method or
-        statement also returns undefined if the variable that is being evaluated
-        does not have an assigned value. (c)A function returns undefined if a
-        value was not returned .
-      </div>
-    </section>
+    </header>
+    <!-- header ends here -->
+
+    <!-- main start here -->
+
+    <main class="py-5 h-full pb-8">
+      <section class="sm:w-1/2 mx-auto flex flex-col gap-5">
+        <!-- first -->
+        <div class="collapse">
+          <input type="checkbox" />
+          <div class="collapse-title text-xl font-medium">
+            1.Differences between localStorage & sessionStorage ?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Session storage is destroyed once the user closes the browser
+              whereas, Local storage stores data with no expiration date.
+            </p>
+          </div>
+        </div>
+
+        <!-- second -->
+        <div class="collapse">
+          <input type="checkbox" />
+          <div class="collapse-title text-xl font-medium">
+            2. Differences between Global Scope & Block Scope?
+          </div>
+          <div class="collapse-content">
+            <p>
+              A global variable has a global scope which means it can be defined
+              anywhere in your JavaScript code. Local Variables A local variable
+              will be visible only within a function where it is defined.
+            </p>
+          </div>
+        </div>
+
+        <!-- third -->
+        <div class="collapse">
+          <input type="checkbox" />
+          <div class="collapse-title text-xl font-medium">
+            3. JavaScript Event Loop Working Principle in brief?
+          </div>
+          <div class="collapse-content">
+            <p>
+              JavaScript event loop, a constantly running process that
+              coordinates the tasks between the call stack and callback queue to
+              achieve concurrency. The event loop is a constantly running
+              process that monitors both the callback queue and the call stack.
+            </p>
+          </div>
+        </div>
+
+        <!-- fourth -->
+        <div class="collapse">
+          <input type="checkbox" />
+          <div class="collapse-title text-xl font-medium">
+            4. The ways you can get `undefined` in JavaScript?
+          </div>
+          <div class="collapse-content">
+            <p>
+              A variable that has not been assigned a value is of type undefined
+              A method or statement also returns undefined if the variable that
+              is being evaluated does not have an assigned value. A function
+              returns undefined if a value was not returned .
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!---------main ends here---->
+
+    <script src="./history.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
