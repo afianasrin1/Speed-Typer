@@ -10,6 +10,27 @@ body {
   background-position: left top;
   font-family: "Zilla Slab", serif;
 }
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100;
+  margin: 0 auto;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li a {
+  padding: 20px;
+  color: rgb(240, 110, 110);
+  font-size: 20px;
+  font-weight: 700;
+}
+.navbar ul li {
+  margin: 15px 5px;
+}
 
 .box-container {
   width: 70%;
