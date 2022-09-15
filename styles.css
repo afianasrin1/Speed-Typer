@@ -104,7 +104,6 @@ body {
 }
 
 .divider-container {
-  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,9 +142,9 @@ button {
 }
 
 #histories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .card {
@@ -182,23 +181,33 @@ button {
   top: 0;
 }
 
-@media only screen and (max-width: 767px) {
-  .box-container {
-    padding: 0 20px;
-    width: 100%;
-  }
-  .card {
-    flex-direction: column;
+@media only screen and (max-width: 1200px) {
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
-@media only screen and (max-width: 1200px) {
+
+@media only screen and (max-width: 768px) {
   .box-container {
     padding: 0 20px;
     width: 100%;
   }
+
+  #histories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .card {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #question {
+    height: 100%;
+    padding: 20px 10px;
   }
 }
