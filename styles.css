@@ -14,7 +14,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -24,9 +24,13 @@ body {
 
 .navbar ul li a {
   padding: 20px;
+  text-decoration: none;
   color: rgb(240, 110, 110);
   font-size: 20px;
   font-weight: 700;
+}
+.navbar ul li a:hover {
+  color: rgb(179, 255, 0);
 }
 .navbar ul li {
   margin: 15px 5px;
